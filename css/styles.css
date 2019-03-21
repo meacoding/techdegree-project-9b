@@ -1,0 +1,67 @@
+ /*---------------------------*/
+ /*Main-----------------------*/
+ /*---------------------------*/
+
+body {
+    background-color: #050609;
+    font-family: proxima-nova, sans-serif;
+    color: #fff;
+    margin: 0;
+}
+#fixed-img {
+    background: url(../images/imageofme.jpg) no-repeat center;
+    background-size: 100%;
+    background-color: #050609;
+    background-position: top;
+    width: 100%;
+    height: 500px;
+    max-height: 100vh;
+    position: absolute;
+    z-index: -2;
+}
+#fixed-gradient {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg,
+        rgba(62, 62, 62, .88) 0%, 
+        rgba(5, 6, 9, 1) 90%);
+}
+@media (min-width: 576px) {
+    #fixed-img {
+        height: 100vh;
+        background-position-y: -25px;
+    }
+}
+@media (min-width: 768px) {
+    #fixed-img {
+        background-position-y: -75px;
+    }
+    #fixed-gradient {
+        background: linear-gradient(180deg,
+            rgba(62, 62, 62, .88) 0%, 
+            rgba(5, 6, 9, 1) 100%);
+    }
+}
+@media (min-width: 1024px) {
+    #fixed-img {
+        height: 800px;
+        background-position-y: -175px;
+    }
+}
+.body-margins {
+    padding: 25px 15px 0;
+}
+
+ /*---------------------------*/
+ /*Footer---------------------*/
+ /*---------------------------*/
+
+footer {
+    height: 2000px;
+    font-size: 16px;
+    color: #545454;
+    text-align: center;
+    padding-bottom: 50px;
+}
