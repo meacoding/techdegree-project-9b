@@ -8,7 +8,16 @@ body {
     color: #fff;
     margin: 0;
 }
-#fixed-img {
+h1 {
+    margin: 0;
+    font-size: 26px;
+}
+p {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 100;
+}
+#fixed-bg {
     background: url(../images/imageofme.jpg) no-repeat center;
     background-size: 100%;
     background-color: #050609;
@@ -53,13 +62,137 @@ body {
 .body-margins {
     padding: 25px 15px 0;
 }
+.top-margin {
+    margin-top: 100px;
+}
+
+/*---------------------------*/
+ /*Header---------------------*/
+ /*---------------------------*/
+
+ #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ #name {
+     font-size: 18px;
+ }
+ .svg-spacing {
+     display: flex;
+     justify-content: space-between;
+ }
+ .svg-profiles {
+     height: 40px;
+     width: 40px;
+     margin-left: 10px;
+ }
+
+/*---------------------------*/
+/*Intro----------------------*/
+/*---------------------------*/
+
+#a-email {
+    text-decoration: none;
+    color: #FE4A49;
+}
+
+
+/*---------------------------*/
+/*Technologies---------------*/
+/*---------------------------*/
+
+#technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tech-icon {
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+}
+#html5 {
+    background: url(../images/svgs/html5.svg) no-repeat;
+}
+#css3 {
+    background: url(../images/svgs/css3.svg) no-repeat;
+}
+#js {
+    background: url(../images/svgs/javascript.svg) no-repeat;
+}
+#jquery {
+    background: url(../images/svgs/jquery.svg) no-repeat;
+}
+#sass {
+    background: url(../images/svgs/sass.svg) no-repeat;
+}
+#bootstrap {
+    background: url(../images/svgs/bootstrap.svg) no-repeat;
+}
+#vue-dot-js {
+    background: url(../images/svgs/vue-dot-js.svg) no-repeat;
+}
+#vs-code {
+    background: url(../images/svgs/vs-code.svg) no-repeat;
+}
+#adobe-xd {
+    background: url(../images/svgs/adobe-xd.svg) no-repeat;
+}
+#adobe-ps {
+    background: url(../images/svgs/adobe-ps.svg) no-repeat;
+}
+
+/*---------------------------*/
+/*Projects-------------------*/
+/*---------------------------*/
+
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+.project-preview {
+    height: 240px;
+    width: 350px;
+    max-width: 100%;
+    margin: 10px 0;
+    background-color: #FE4A49;
+    cursor: pointer;
+}
+#project-uw {
+    background: url(../images/projects/project-uw.png) no-repeat;
+    background-size: cover;
+}
+#project-dash {
+    background: url(../images/projects/project-dash.png) no-repeat;
+    background-size: cover;
+}
+#project-di {
+    background: url(../images/projects/project-di.png) no-repeat;
+    background-size: cover;
+}
+#project-at {
+    background: url(../images/projects/project-at.png) no-repeat;
+    background-size: cover;
+}
+#project-portfolio {
+    /* background: url(../images/projects/project-uw.png) no-repeat; */
+    background-size: cover;
+}
+
+/*---------------------------*/
+/*Contact Me-----------------*/
+/*---------------------------*/
+
+#contact h1 {
+    font-weight: 400;
+}
 
  /*---------------------------*/
  /*Footer---------------------*/
  /*---------------------------*/
 
-footer {
-    height: 2000px;
+#footer {
     font-size: 16px;
     color: #545454;
     text-align: center;
