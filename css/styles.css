@@ -1,4 +1,4 @@
- /*---------------------------*/
+ /*---------------------------*/ 
  /*Main-----------------------*/
  /*---------------------------*/
 
@@ -65,28 +65,31 @@ p {
 .top-margin {
     margin-top: 100px;
 }
+.top-margin-50 {
+    margin-top: 50px;
+}
+.svg-spacing {
+    display: flex;
+    justify-content: center;
+}
+.svg-profiles {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
 
 /*---------------------------*/
- /*Header---------------------*/
- /*---------------------------*/
+/*Header---------------------*/
+/*---------------------------*/
 
- #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
- #name {
-     font-size: 18px;
- }
- .svg-spacing {
-     display: flex;
-     justify-content: space-between;
- }
- .svg-profiles {
-     height: 40px;
-     width: 40px;
-     margin-left: 10px;
- }
+#header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+#name {
+    font-size: 18px;
+}
 
 /*---------------------------*/
 /*Intro----------------------*/
@@ -160,19 +163,19 @@ p {
     cursor: pointer;
 }
 #project-uw {
-    background: url(../images/projects/project-uw.png) no-repeat;
+    background: url(../images/projects/project-uw.jpg) no-repeat;
     background-size: cover;
 }
 #project-dash {
-    background: url(../images/projects/project-dash.png) no-repeat;
+    background: url(../images/projects/project-dash.jpg) no-repeat;
     background-size: cover;
 }
 #project-di {
-    background: url(../images/projects/project-di.png) no-repeat;
+    background: url(../images/projects/project-di.jpg) no-repeat;
     background-size: cover;
 }
 #project-at {
-    background: url(../images/projects/project-at.png) no-repeat;
+    background: url(../images/projects/project-at.jpg) no-repeat;
     background-size: cover;
 }
 #project-portfolio {
@@ -181,12 +184,79 @@ p {
 }
 
 /*---------------------------*/
+/*Learning-------------------*/
+/*---------------------------*/
+
+#learning h1 {
+    font-weight: 400;
+}
+#a-treehouse {
+    color: #9EBE58;
+    text-decoration: none;
+}
+
+/*---------------------------*/
 /*Contact Me-----------------*/
 /*---------------------------*/
 
 #contact h1 {
     font-weight: 400;
+    color: #FE4A49;
 }
+#email-icon {
+    background: url(../images/svgs/envelope-solid-fa.svg) no-repeat;
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    fill: #ffffff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+}
+#contact .svg-profiles {
+    margin-right: 10px;
+}
+.course {
+    display: flex;
+    padding: 0 26px;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 30px;
+}
+.course a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.course-img {
+    width: 50px;
+    min-width: 50px;
+    height: 54.5px;
+}
+.course-info {
+    margin-left: 23px;
+}
+.course-info h2 {
+    color: #ffffff;
+    line-height: 1;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.course-info p {
+    color: #ffffff;
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    line-height: 1;
+    text-align: left;
+}
+.course-info .course-img {
+    width: 172px;
+    min-width: 172px;
+    height: 172px;
+}   
 
  /*---------------------------*/
  /*Footer---------------------*/
@@ -197,4 +267,11 @@ p {
     color: #545454;
     text-align: center;
     padding-bottom: 50px;
+}
+
+
+
+#narrative-uw {
+    position: absolute;
+    z-index: 99;
 }
