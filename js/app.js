@@ -2,12 +2,13 @@
 
 $(document).ready(function(){ 
 
+    // Get and display recent Treehouse courses taken
     const here = document.getElementById('insert-here');
 
     $.getJSON('https://teamtreehouse.com/meacoding.json', function(data) {
     
         const jsonData = data.badges;
-        const lastThreeOfJson = jsonData.slice((jsonData.length)-3); 
+        const lastThreeOfJson = jsonData.slice((jsonData.length)-4); 
         console.log(lastThreeOfJson, 'lastThreeOfJson');
 
         for (let i = 0; i < lastThreeOfJson.length; i++){
@@ -58,5 +59,14 @@ $(document).ready(function(){
 
         }
     });
+
+    $('#project-uw').click(function (){
+        $('#narrative-uw').css('display', 'block');
+        $('body').css('overflow', 'hidden');
+    })
+    $('.closebtn').click(function(){
+        $(this).parent().css('display', 'none');
+        $('body').css('overflow', 'visible');
+    })
     
 });

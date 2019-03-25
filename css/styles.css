@@ -2,20 +2,44 @@
  /*Main-----------------------*/
  /*---------------------------*/
 
+html {
+    height: 100%;
+    /* overflow: hidden; */
+}
+
 body {
     background-color: #050609;
     font-family: proxima-nova, sans-serif;
     color: #fff;
     margin: 0;
+    max-width: 100%;
 }
 h1 {
-    margin: 0;
+    margin: 0 0 15px;
     font-size: 26px;
 }
+@media(min-width: 768px){
+    h1 {
+        font-size: 50px;
+        font-weight: 700;
+    }
+}
+@media (min-width: 992px){
+    h1,
+    p {
+        text-align: center;
+    }
+}
+h2 {
+    margin: 0 0 10px;
+}
 p {
-    margin: 15px 0;
+    margin: 0 0 18px;
     font-size: 18px;
     font-weight: 100;
+}
+svg {
+    height: 100%;
 }
 #fixed-bg {
     background: url(../images/imageofme.jpg) no-repeat center;
@@ -38,13 +62,13 @@ p {
         rgba(5, 6, 9, 1) 90%);
 }
 @media (min-width: 576px) {
-    #fixed-img {
+    #fixed-bg {
         height: 100vh;
         background-position-y: -25px;
     }
 }
 @media (min-width: 768px) {
-    #fixed-img {
+    #fixed-bg {
         background-position-y: -75px;
     }
     #fixed-gradient {
@@ -54,7 +78,7 @@ p {
     }
 }
 @media (min-width: 1024px) {
-    #fixed-img {
+    #fixed-bg {
         height: 800px;
         background-position-y: -175px;
     }
@@ -62,7 +86,22 @@ p {
 .body-margins {
     padding: 25px 15px 0;
 }
-.top-margin {
+@media(min-width: 576px){
+    .body-margins {
+        padding: 50px 40px 0;
+    }
+}
+@media (min-width: 768px){
+    .body-margins {
+        padding: 50px 75px 0;
+    }
+}
+@media (min-width: 1200px){
+    .body-margins {
+        padding: 50px 125px 0;
+    }
+}
+.top-margin-100 {
     margin-top: 100px;
 }
 .top-margin-50 {
@@ -72,11 +111,18 @@ p {
     display: flex;
     justify-content: center;
 }
-.svg-profiles {
+.icon {
     height: 40px;
     width: 40px;
-    margin-left: 10px;
+    margin: 15px;
 }
+@media (min-width:1200px){
+    #intro,
+    #contact {
+        text-align: center;
+    }
+}
+
 
 /*---------------------------*/
 /*Header---------------------*/
@@ -89,6 +135,15 @@ align-items: center;
 }
 #name {
     font-size: 18px;
+}
+.icon-header {
+    margin: 0 0 0 10px;
+    /* must be placed after .icon */
+}
+@media (min-width: 992px){
+    .icon-header {
+        margin: 0 0 0 30px;
+    }
 }
 
 /*---------------------------*/
@@ -109,11 +164,6 @@ align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-.tech-icon {
-    height: 40px;
-    width: 40px;
-    margin: 15px;
 }
 #html5 {
     background: url(../images/svgs/html5.svg) no-repeat;
@@ -154,31 +204,89 @@ align-items: center;
     display: flex;
     flex-direction: column;
 }
+@media (min-width: 992px){
+    #projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly
+    }
+}
 .project-preview {
-    height: 240px;
-    width: 350px;
-    max-width: 100%;
-    margin: 10px 0;
+    height: calc(100vw/1.5);
+    width: 100%;
+    margin: 10px auto;
     background-color: #FE4A49;
     cursor: pointer;
 }
-#project-uw {
-    background: url(../images/projects/project-uw.jpg) no-repeat;
+@media (min-width: 576px){
+    .project-preview {
+        height: 330px;
+        width: 495px;
+    }
+}
+@media (min-width: 992px){
+    .project-preview {
+        padding: 1px;
+        margin: 15px;
+    }
+}
+@media (min-width: 1200px){
+    .project-preview{
+        height: calc(100vw/3.5);
+        width: 47%;
+    }
+}
+#hover-content-uw,
+#hover-content-dash,
+#hover-content-di,
+#hover-content-at,
+#hover-content-portfolio {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 25px;
+}
+#project-uw:hover #hover-content-uw,
+#project-dash:hover #hover-content-dash,
+#project-di:hover #hover-content-di,
+#project-at:hover #hover-content-at,
+#project-portfolio:hover #hover-content-portfolio {
+    display: flex;
+}
+#hover-content-uw {
+    background-color: #FE4A49;
+}
+#hover-content-dash {
+    background-color: #545454;
+}
+#hover-content-di {
+    background-color: #9EBE58;
+}
+#hover-content-at {
+    background-color: #08B2E3;
+}
+#hover-content-uw {
+    background-color: #FE4A49;
+}
+.project-uw {
+    background: url(../images/projects/project-uw.jpg) no-repeat center;
     background-size: cover;
 }
-#project-dash {
-    background: url(../images/projects/project-dash.jpg) no-repeat;
+.project-dash {
+    background: url(../images/projects/project-dash.jpg) no-repeat center;
     background-size: cover;
 }
-#project-di {
-    background: url(../images/projects/project-di.jpg) no-repeat;
+.project-di {
+    background: url(../images/projects/project-di.jpg) no-repeat center;
     background-size: cover;
 }
-#project-at {
-    background: url(../images/projects/project-at.jpg) no-repeat;
+.project-at {
+    background: url(../images/projects/project-at.jpg) no-repeat center;
     background-size: cover;
 }
-#project-portfolio {
+.project-portfolio {
     /* background: url(../images/projects/project-uw.png) no-repeat; */
     background-size: cover;
 }
@@ -187,42 +295,20 @@ align-items: center;
 /*Learning-------------------*/
 /*---------------------------*/
 
-#learning h1 {
-    font-weight: 400;
-}
 #a-treehouse {
     color: #9EBE58;
     text-decoration: none;
 }
-
-/*---------------------------*/
-/*Contact Me-----------------*/
-/*---------------------------*/
-
-#contact h1 {
-    font-weight: 400;
-    color: #FE4A49;
-}
-#email-icon {
-    background: url(../images/svgs/envelope-solid-fa.svg) no-repeat;
-    background-size: cover;
-    height: 60px;
-    width: 60px;
-    fill: #ffffff;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 75px;
-}
-#contact .svg-profiles {
-    margin-right: 10px;
+#insert-here {
+    display: flex;
+    flex-wrap: wrap;
 }
 .course {
     display: flex;
-    padding: 0 26px;
+    padding: 0 25px;
     align-items: center;
     width: 300px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
 }
 .course a {
     text-decoration: none;
@@ -244,6 +330,12 @@ align-items: center;
     font-size: 16px;
     letter-spacing: 1px;
     text-transform: capitalize;
+    font-weight: 600;
+}
+@media (min-width: 576px){
+    .course-info h2 {
+        font-size: 20px;
+    }
 }
 .course-info p {
     color: #ffffff;
@@ -257,6 +349,42 @@ align-items: center;
     min-width: 172px;
     height: 172px;
 }   
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+    #insert-here {
+        display: flex;
+        padding: 0 75px;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+/*---------------------------*/
+/*Contact Me-----------------*/
+/*---------------------------*/
+
+#contact h1 {
+    color: #08B2E3;
+}
+#email-icon {
+    background: url(../images/svgs/envelope-solid-fa.svg) no-repeat;
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    fill: #ffffff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+}
+#contact .treehouse,
+#contact .github,
+#contact .hackerrank {
+    margin-right: 10px;
+}
 
  /*---------------------------*/
  /*Footer---------------------*/
@@ -268,10 +396,72 @@ align-items: center;
     text-align: center;
     padding-bottom: 50px;
 }
+#footer .icon {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
 
+/*---------------------------*/
+/*Project - Overlays---------*/
+/*---------------------------*/
 
-
+.overlay h1 {
+    font-weight: 600;
+    margin-top: 65px;
+    text-align: center;
+}
+.overlay {
+    padding: 25px 15px 0;
+    box-sizing: border-box;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;  
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: #050609;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    padding-top: 25px;
+    width: 100%;
+    margin-top: 30px;
+}
+.overlay h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.closebtn {
+    position: fixed;
+    text-decoration: none;
+    font-size: 60px;
+    color: #ffffff;
+    line-height: .5;
+    z-index: 10;
+    cursor: pointer;
+}
+.section-margin {
+    margin: 35px 0;
+}
+.line-div {
+    margin: 50px 0;
+}
+.line {
+    width: 25px;
+    height: 1px;
+    margin: 10px auto;
+}
 #narrative-uw {
-    position: absolute;
-    z-index: 99;
+    display: none;
+}
+#narrative-uw .external {
+    color: #FE4A49;
+}
+#narrative-uw .line {
+    background-color: #FE4A49;
 }
