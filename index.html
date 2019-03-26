@@ -96,7 +96,7 @@
         <div id="contact" class="top-margin-100">
             <h1>Contact Me</h1>
             <p>
-                I'm actively looking for opportunities. Check out what I can do and then contact me!
+                I'm actively looking for opportunities. Check out what I can do and then contact me! 
             </p>
             <!-- <div class="svg-spacing top-margin-50">
                 <a href="https://teamtreehouse.com/meacoding" target="_blank">
@@ -116,6 +116,36 @@
                 </a>
             </div> -->
             <a id="a-email" href="mailto:amanda@amandaharness.com"><div id="email-icon" class="top-margin-50"></div></a>
+
+            <form action="contact.php" method="post">
+                <div class="elem-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+                </div>
+                <div class="elem-group">
+                  <label for="email">Your E-mail</label>
+                  <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+                </div>
+                <div class="elem-group">
+                  <label for="department-selection">Choose Concerned Department</label>
+                  <select id="department-selection" name="concerned_department" required>
+                      <option value="">Select a Department</option>
+                      <option value="billing">Billing</option>
+                      <option value="marketing">Marketing</option>
+                      <option value="technical support">Technical Support</option>
+                  </select>
+                </div>
+                <div class="elem-group">
+                  <label for="title">Reason For Contacting Us</label>
+                  <input type="text" id="title" name="email_title" required placeholder="Unable to Reset my Password" pattern=[A-Za-z0-9\s]{8,60}>
+                </div>
+                <div class="elem-group">
+                  <label for="message">Write your message</label>
+                  <textarea id="message" name="visitor_message" placeholder="Say whatever you want." required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+              </form>
+
         </div>
 
         <div id="narrative-uw" class="overlay">
