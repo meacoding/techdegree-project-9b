@@ -521,13 +521,16 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
 }
 ul {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 ul li {
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -536,26 +539,61 @@ ul li {
     flex-grow: 1;
 }
 li,
-input {
+input,
+textarea {
     display: flex;
+    font-family: proxima-nova, sans-serif;
+    font-size: 18px;
+    text-align: left;
+}
+input {
+    height: 50px;
+    padding: 0 20px;
+}
+textarea {
+    height: 200px;
+    padding: 20px;
+    resize: vertical;
 }
 input,
 textarea {
     flex: 2 440px;
     box-sizing: border-box;    
-    margin-bottom: 15px;
-    padding: 0 20px;
-    height: 50px;
+    margin-bottom: 25px;
     width: 100%;
     border: none;
-    background-color: #eff0f1;
     border-radius: 4px;
+    color: #050609;
 }
 label {
     width: 100px;
     flex: 1 150px;
-    max-width: 150px;
-    color: #46698b;
-    padding-bottom: 5px;
-    font-size: 1rem;
+    color: #9EBE58;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #cdcdcd;
+}
+input:focus,
+textarea:focus {
+    background-color: #545454;
+    color: #CDCDCD;
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: #08B2E3;
+}
+button {
+    font-family: proxima-nova, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    background-color: #FE4A49;
+    border: none;
+    height: 60px;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
