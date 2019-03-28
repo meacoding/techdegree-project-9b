@@ -69,4 +69,18 @@ $(document).ready(function(){
         $('body').css('overflow', 'visible');
     })
     
+
+    function SubmitFormData() {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+        $.post("contact.php", { name: name, email: email, message: message },
+        function(data) {
+         $('#results').html(data);
+         $('form')[0].reset();
+        });
+    }
+
+    $('button').click(SubmitFormData());
+
 });

@@ -507,14 +507,14 @@ align-items: center;
     background-color: #FE4A49;
 }
 
-
+/* 
 #overlay-background {
     display: none;
     background-color: white;
     position: fixed;
     width: 100%;
     height: 100%;
-}
+} */
 
 form {
     display: flex;
@@ -565,31 +565,24 @@ textarea {
     border-radius: 4px;
     color: #050609;
 }
-label {
-    width: 100px;
-    flex: 1 150px;
-    color: #9EBE58;
-    padding-bottom: 10px;
-    font-size: 18px;
-}
 input::placeholder,
 textarea::placeholder {
-    color: #cdcdcd;
+    color: #545454;
 }
 input:focus,
 textarea:focus {
-    background-color: #545454;
-    color: #CDCDCD;
+    /* background-color: #9b9b9b; */
+    color: #050609;
 }
 input:focus::placeholder,
 textarea:focus::placeholder {
-    color: #08B2E3;
+    color: #cdcdcd;
 }
 button {
     font-family: proxima-nova, sans-serif;
     font-size: 18px;
     justify-content: center;
-    background-color: #FE4A49;
+    background-color: #9EBE58;
     border: none;
     height: 60px;
     border-radius: 4px;

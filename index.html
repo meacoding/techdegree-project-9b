@@ -120,16 +120,13 @@
             <form class="top-margin-50" action="contact.php" method="post">
                 <ul>
                     <li class="elem-group">
-                        <label for="name">name</label>
-                        <input type="text" id="name" name="visitor_name" placeholder="your name" pattern=[A-Z\sa-z]{3,20} required>
+                        <input type="text" id="name" name="visitor_name" placeholder="Name" title="Name" pattern=[A-Z\sa-z]{3,20} required>
                     </li>
                     <li class="elem-group">
-                        <label for="email">email</label>
-                        <input type="email" id="email" name="visitor_email" placeholder="your.email@example .com" required>
+                        <input type="email" id="email" name="visitor_email" placeholder="Email" title="Email" required>
                     </li>
                     <li class="elem-group">
-                        <label for="message">message</label>
-                        <textarea id="message" name="visitor_message" placeholder="Your message here." required></textarea>
+                        <textarea id="message" name="visitor_message" placeholder="Your message" title="Your message." required></textarea>
                     </li>
                 </ul>
                 <button type="submit">Send Message</button>
