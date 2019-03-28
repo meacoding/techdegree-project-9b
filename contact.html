@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" href="https://use.typekit.net/sra2agj.css">
+        <link rel="stylesheet" type="text/css" href="css/contact.css">
+    </head>
+
+    <form action="contact.php" method="post">
+        <ul>
+            <li class="elem-group">
+                <input type="text" id="name" name="visitor_name" placeholder="Name" title="Name" pattern=[A-Z\sa-z]{3,20} required>
+            </li>
+            <li class="elem-group">
+                <input type="email" id="email" name="visitor_email" placeholder="Email" title="Email" required>
+            </li>
+            <li class="elem-group">
+                <textarea id="message" name="visitor_message" placeholder="Your message" title="Your message." required></textarea>
+            </li>
+        </ul>
+        <button type="submit">Send Message</button>
+      </form>
+</html>
