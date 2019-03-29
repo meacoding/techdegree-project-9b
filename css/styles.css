@@ -2,9 +2,16 @@
  /*Main-----------------------*/
  /*---------------------------*/
 
+ html,
+ body {
+     /* overflow: hidden; */
+     position: relative;
+     height: 100%;
+ }
+
 html {
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body {
@@ -432,11 +439,12 @@ iframe {
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     background-color: #050609;
     overflow-x: hidden;
     transition: 0.5s;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 /* @media(min-width: 576px){
     .overlay {
@@ -454,7 +462,7 @@ iframe {
     }
 }
 .overlay-content {
-    position: relative;
+    /* position: relative; */
     padding-top: 25px;
     width: 100%;
     text-align: left;
@@ -493,7 +501,7 @@ iframe {
     font-size: 60px;
     color: #ffffff;
     line-height: .5;
-    z-index: 10;
+    z-index: 1000;
     cursor: pointer;
 }
 .section-margin {
@@ -519,3 +527,8 @@ iframe {
     background-color: #FE4A49;
 }
 
+.noOverflow {
+    /* overflow: hidden; */
+    height: 100vh;
+    position: fixed;
+}
