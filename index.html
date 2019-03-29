@@ -15,9 +15,9 @@
 
 <body>
     <!-- <div id="overlay-background"></div> -->
-    <!-- <div id="fixed-bg">
+    <div id="fixed-bg">
         <div id="fixed-gradient"></div>
-    </div> -->
+    </div><!-- /#fixed-bg  -->
     
     <div class="body-margins">
         <div id="header">
@@ -41,7 +41,7 @@
                     </div>
                 </a>
             </div>
-        </div>
+        </div><!-- /#header  -->
 
         <div id="intro" class="top-margin-100">
             <h1>Front-End Developer</h1>
@@ -51,7 +51,7 @@
             <p>
                 Let's have a chat - send me an <a id="a-email" href="mailto:amanda@amandaharness.com">email</a>.
             </p>
-        </div>
+        </div><!-- /#intro  -->
 
         <div id="technologies" class="top-margin-100">
             <div class="icon" id="html5" title="HTML5"></div>
@@ -64,7 +64,7 @@
             <div class="icon" id="vs-code" title="Visual Studio Code"></div>
             <div class="icon" id="adobe-xd" title="Adobe XD"></div>
             <div class="icon" id="adobe-ps" title="Adobe Photoshop"></div>
-        </div>
+        </div><!-- /#technologies  -->
 
         <div id="projects" class="top-margin-100">
             <div id="project-uw" class="project-preview project-uw">
@@ -82,7 +82,7 @@
             <div id="project-portfolio" class="project-preview project-portfolio">
                 <div id="hover-content-portfolio">This Portfolio</div>
             </div>
-        </div>
+        </div><!-- /#projects  -->
 
         <div id="learning" class="top-margin-100">
             <h1>Currently Learning</h1>
@@ -92,38 +92,20 @@
             <div style="margin: 0 auto">
                 <div id="insert-here" class="top-margin-50"></div>
             </div>
-        </div>
+        </div><!-- /#learning  -->
 
         <div id="contact" class="top-margin-100">
             <h1>Contact Me</h1>
             <p>
                 I'm actively looking for opportunities. Check out what I can do and then contact me! 
             </p>
-            
-
             <iframe class="top-margin-50" src="contact.html" frameborder="0" width="290px">
                 alternative content for browsers which do not support iframe.
             </iframe>
-        
 
-            <!-- <form class="top-margin-50" action="contact.php" method="post">
-                <ul>
-                    <li class="elem-group">
-                        <input type="text" id="name" name="visitor_name" placeholder="Name" title="Name" pattern=[A-Z\sa-z]{3,20} required>
-                    </li>
-                    <li class="elem-group">
-                        <input type="email" id="email" name="visitor_email" placeholder="Email" title="Email" required>
-                    </li>
-                    <li class="elem-group">
-                        <textarea id="message" name="visitor_message" placeholder="Your message" title="Your message." required></textarea>
-                    </li>
-                </ul>
-                <button type="submit">Send Message</button>
-              </form> -->
+        </div><!-- /#contact  -->
 
-        </div>
-
-        <div id="narrative-uw" class="overlay">
+        <div class="overlay" id="narrative-uw">
             <a class="closebtn">&times;</a>
             
             <div class="overlay-content">
@@ -193,7 +175,79 @@
                     <div class="line"></div>
                 </div>
             </div>
-        </div>
+        </div> <!-- /.overlay #narrative-uw  -->
+
+        <div class="overlay" id="narrative-dash">
+            <a class="closebtn">&times;</a>
+            
+            <div class="overlay-content">
+                <div class="project-preview project-dash" title="Dashboard"></div>
+                <h1 class="section-margin">Dashboard</h1>
+            
+                <div class="svg-spacing section-margin">
+                    <a href="https://github.com/meacoding/" target="_blank">
+                        <div class="icon github">
+                            <svg role="img" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </div>
+                    </a>
+                    <a href="https://github.com/meacoding/" target="_blank">
+                        <div class="icon external">
+                                <svg aria-hidden="true" focusable="false" fill="#CDCDCD" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="section-margin">
+                    <h2>
+                        What is it?
+                    </h2>
+                    <p>
+                        An interactive object that presents a quest to the user.
+                    </p>
+                </div>
+                <div class="section-margin">
+                    <h2>
+                        Technologies and skills used
+                    </h2>
+                    <p>
+                        HTML, CSS, JavaScript, jQuery, Bootstrap
+                    </p>
+                </div>
+                <div class="section-margin">
+                    <h2>
+                        Reason for creation
+                    </h2>
+                    <p>
+                        To demonstrate ability to create intermediate animations with CSS and jQuery.
+                    </p>
+                </div>
+                <div class="section-margin">
+                    <h2>
+                        What I did
+                    </h2>
+                    <p>
+                        The HTML is laid out in three phases, each containing a different content/animation grouping. Phase 2 utilizes Bootstrap's grid system. All animated elements are built with CSS animations alongside jQuery.
+                    </p>
+                </div>
+                <div class="section-margin">
+                    <h2>
+                        Backstory
+                    </h2>
+                    <p>
+                        The idea for this project was inspired by World of Warcraft. I thought it would be cool to come across a quest object that needed my attention. In my head I hear a gnome saying, "Take this to data extraction terminal ahead." You insert the card, the terminal extracts the data and an invitation appears on the screen.
+                    </p>
+                    <p>
+                        The timing of the animations required an incredible amount of trial and error, especially with the monospace text readout and the blinking text cursor. The initial pacing was too slow, of course. After replaying the sequence about a hundred times and getting feedback from friends, I achieved a happy pace that could successfully hold the user's attention.
+                    </p>
+                    <p>
+                        I did have one roadblock during this project and consequently learned about preventDefault(). Initializing the card insertion event in the second phase requires either click or touchstart. I didn't know that if one event was triggered that the other event could still be triggered. My mentor ever so graciously pointed out that I needed to prevent the other event from being triggered with preventDefault(). Thanks!
+                    </p>
+                </div>
+                <div class="line-div">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div> <!-- /.overlay #narrative-dash  -->
 
         <div id="footer" class="top-margin-100">
             &copy; <script>new Date().getFullYear()>2016&&document.write(new Date().getFullYear());</script> Amanda Harness
@@ -215,8 +269,8 @@
                         </div>
                     </a>
                 </div>
-        </div>
-    </div>
+        </div><!-- /#footer  -->
+    </div> <!-- /.body-margins  -->
 <script src="js/app.js"></script>
 </body>
 </html>

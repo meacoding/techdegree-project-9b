@@ -93,6 +93,10 @@ svg {
 .body-margins {
     padding: 25px 15px 0;
 }
+.noOverflow {
+    height: 100vh;
+    position: fixed;
+}
 @media(min-width: 576px){
     .body-margins {
         padding: 50px 40px 0;
@@ -515,11 +519,14 @@ iframe {
     height: 1px;
     margin: 10px auto;
 }
-#narrative-uw {
+
+#narrative-uw,
+#narrative-dash {
     display: none;
     margin-left: auto;
     margin-right: auto;
 }
+
 #narrative-uw .external {
     color: #FE4A49;
 }
@@ -527,8 +534,9 @@ iframe {
     background-color: #FE4A49;
 }
 
-.noOverflow {
-    /* overflow: hidden; */
-    height: 100vh;
-    position: fixed;
+#narrative-dash .external {
+    color: #cdcdcd;
+}
+#narrative-dash .line {
+    background-color: #cdcdcd;
 }
