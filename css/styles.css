@@ -521,16 +521,21 @@ iframe {
 }
 
 #narrative-uw,
-#narrative-dash {
+#narrative-dash,
+#narrative-di,
+#narrative-at,
+#narrative-portfolio {
     display: none;
     margin-left: auto;
     margin-right: auto;
 }
 
-#narrative-uw .external {
+#narrative-uw .external,
+#narrative-portfolio .external {
     color: #FE4A49;
 }
-#narrative-uw .line {
+#narrative-uw .line,
+#narrative-portfolio .line {
     background-color: #FE4A49;
 }
 
@@ -539,4 +544,18 @@ iframe {
 }
 #narrative-dash .line {
     background-color: #cdcdcd;
+}
+
+#narrative-di .external {
+    color: #9EBE58;
+}
+#narrative-di .line {
+    background-color: #9EBE58;
+}
+
+#narrative-at .external {
+    color: #08B2E3;
+}
+#narrative-at .line {
+    background-color: #08B2E3;
 }
