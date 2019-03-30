@@ -5,27 +5,25 @@ let previousDi = "#project-di";
 let previousAt = "#project-at";
 let previousPortfolio = "#project-portfolio";
 
-$(document).ready(function(){ 
+$(document).ready(function(){
 
     // Get and display recent Treehouse courses taken
-    const here = document.getElementById('insert-here');
+    const here = document.getElementById("insert-here");
 
-    $.getJSON('https://teamtreehouse.com/meacoding.json', function(data) {
-    
+    $.getJSON("https://teamtreehouse.com/meacoding.json", function(data) {
+
         const jsonData = data.badges;
-        const lastThreeOfJson = jsonData.slice((jsonData.length)-4); 
-        console.log(lastThreeOfJson, 'lastThreeOfJson');
+        const lastThreeOfJson = jsonData.slice((jsonData.length)-4);
 
         for (let i = 0; i < lastThreeOfJson.length; i++){
 
             //Course name
             const name = lastThreeOfJson[i].name;
-            console.log(name, 'name');
 
             //Date badge earned
             const date = new Date(lastThreeOfJson[i].earned_date);
             function formatDate(date) {
-                
+
                 const monthNames = [
                     "Jan", "Feb", "Mar",
                     "Apr", "May", "Jun", "Jul",
@@ -35,21 +33,20 @@ $(document).ready(function(){
                 const day = date.getDate();
                 const monthIndex = date.getMonth();
                 const year = date.getFullYear();
-                
+
                 return `${monthNames[monthIndex]} ${day}, ${year}`;
             }
-            
+
             const fullDate = `${formatDate(date)}`;
-            console.log(fullDate, 'fullDate');
 
             //Badge icon
             const img = lastThreeOfJson[i].icon_url;
 
             //Course link
             const url = lastThreeOfJson[i].url;
-            
-            const card = document.createElement('div');
-            card.classList = 'course';
+
+            const card = document.createElement("div");
+            card.classList = "course";
             const htmlCard = `
                 <a href="${url}" target="_blank">
                     <img class="course-img" src="${img}" alt="">
@@ -61,32 +58,31 @@ $(document).ready(function(){
             `;
             card.innerHTML = htmlCard;
             here.appendChild(card);
-
         }
     });
 
     function projectModal (proj, projPrev){
         $(`#project-${proj}`).click(function (){
-            $(`#narrative-${proj}`).css('display', 'block');
-            $('.body-margins').addClass('noOverflow');
-            $('.overlay').animate({
+            $(`#narrative-${proj}`).css("display", "block");
+            $(".body-margins").addClass("noOverflow");
+            $(".overlay").animate({
                 scrollTop: 0
             }, 700);
         })
         $(`#narrative-${proj} .closebtn`).click(function(){
             let top = $(projPrev).position().top;
-            $(this).parent().css('display', 'none');
-            $('.body-margins').removeClass('noOverflow');
-            $('html, body').animate({
+            $(this).parent().css("display", "none");
+            $(".body-margins").removeClass("noOverflow");
+            $("html, body").animate({
                 scrollTop: top
             }, 700);
         });
     }
 
-    projectModal('uw', previousUw);
-    projectModal('dash', previousDash);
-    projectModal('di', previousDi);
-    projectModal('at', previousAt);
-    projectModal('portfolio', previousPortfolio);
+    projectModal("uw", previousUw);
+    projectModal("dash", previousDash);
+    projectModal("di", previousDi);
+    projectModal("at", previousAt);
+    projectModal("portfolio", previousPortfolio);
 
 });

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111184310-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111184310-1');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.2.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/mediaQueries.css">
+    <title>digital invitation</title>
+</head>
+
+<body>
+
+<section class="container-fluid outer">    
+    <div class="inner">    
+    
+<!------------ Phase 0 - Rotate Screen ------------>
+        <div class="responsive-container">    
+            <div class="img-container">
+                <img src="images/rotatescreen.png" alt="">
+            </div>
+        </div>
+<!------------ End Phase 0 - Rotate Screen ------------>
+
+<!------------ Phase 1 - Card Flipping ------------>
+        <div class="flipContainer shake">
+            <div class="row text-center container_width">
+                <div class="col card text-center">
+                    <img class="cardFront" src="images/cardFront.png" alt="">
+                    <img class="cardBack" src="images/cardBack.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="text-center container_width">
+            <div class="message">
+                <div class="btn btn1">
+                    <span class="btn-content">Hey! This needs<br>your attention.<br>Examine it.</span>
+                    <span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                </div>               
+                <div class="btn btn2 displayNone">
+                    <span class="btn-content">Aha! Take this to <br>the extraction<br> terminal ahead.</span>
+                    <span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+<!------------ End Phase 1 - Card Flipping ------------>
+       
+<!------------ Phase 2 - Terminal ------------>
+        <div class="terminal displayNone fadein">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="indicator ind-1"></div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="indicator ind-2"></div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="indicator ind-3"></div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="indicator ind-4"></div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="indicator ind-5"></div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="indicator ind-6"></div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-12 top">
+                    <div class="readout text-center">
+                        <div class="typewriter"><span class="readouttext"></span><span class="blink">|</span></div>
+                    </div>
+                </div>
+            </div>           
+            
+            <div class="row cardreaderContainer">
+                <div class="span1">
+                    <div class="row">
+                        <div class="cardreader cardreadertop"></div>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="row">
+                        <div class="cardreader cardreaderbottom"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="col-sm-12 text-center">
+                    <div class="datacard">
+                        <img src="images/cardBack.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+<!------------ End Phase 2 - Terminal ------------>
+        
+<!------------ Phase 3 - Invitation ------------>        
+        <div class="invite displayNone">
+            <div class="overlay">
+                <p class="invitetext text-center">Farewell Soir&eacute;e</p>
+                <p class="invitetext">Traveller!</p>
+                <p class="invitetext">The great wizard of Stormwind, Eyr&uacute;n, requests the pleasure of your company at her farewell soir&eacute;e on <span>Saturday, May 26, 2018</span> at <span>5pm</span> at the <span>Lion's Pride Inn</span>.</p>
+                <p class="invitetext">Send word to innkeeper, <span>Sionnach</span>, at the Lion's Pride Inn in Goldshire to accept request.</p>
+                <br>
+                <p class="invitetext cta text-center"><a href="#" class="" id="cta1">Send Word to Sionnach</a><br><a href="#" id="cta2">Add to Calendar</a></p>
+            </div>
+        </div>
+<!------------ Phase 3 - Invitation ------------>      
+
+    </div>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

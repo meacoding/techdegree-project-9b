@@ -1,12 +1,3 @@
-/* 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 400px;
-    margin: 0 auto;
-} */
 ul {
     padding: 0;
     margin: 0;
@@ -53,7 +44,6 @@ textarea::placeholder {
 }
 input:focus,
 textarea:focus {
-    /* background-color: #9b9b9b; */
     color: #050609;
 }
 input:focus::placeholder,

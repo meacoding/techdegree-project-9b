@@ -1,0 +1,567 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*---------- Cited Code ----------*/
+
+/*For Phase 1 - Card Flipping*/
+.btn {
+    border-radius: 0px;
+    color: #ffffff;
+    display: inline-block;
+    margin: 0 0.25em;
+    overflow: hidden;
+    padding: 20px 60px 20px 12px;
+    position: relative;
+    text-decoration: none;
+    line-height: 1.2;
+    background-color: rgba(0, 0, 0, .4);
+    width: 230px;
+}
+.btn .btn-content {
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 0 12px;
+    position: relative;
+    right: 0;
+    -webkit-transition: right 300ms ease;
+    -o-transition: right 300ms ease;
+    transition: right 300ms ease;
+    display: block;
+    text-align: left;
+}
+.btn .icon {
+    border-left: 1px solid #ffffff;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    -webkit-transition: all 200ms ease;
+         -o-transition: all 200ms ease;
+            transition: all 200ms ease;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 58px;
+    height: 70%;
+}
+.btn .icon i {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease;
+         -o-transition: opacity 300ms ease;
+            transition: opacity 300ms ease;
+}
+.btn:hover .btn-content {
+    right: 100%;
+    color: transparent;
+}
+.btn:hover .icon, .btn:active .icon {
+    border-left: 0;
+    color: #ffffff;
+    font-size: 3em;
+    width: 100%;
+}
+.btn:hover {
+    background-color: transparent;
+}
+/*
+Copyright (c) 2017 by Phil Hoyt (https://codepen.io/philhoyt/pen/VjzjjR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+/*---------- End Cited Code ----------*/
+
+/*---------- Bug Fixes ----------*/
+@-ms-viewport{
+	width: auto !important; /*Fixed Bootstrap bug related to IE scroll bar overlay*/
+}
+/*---------- End Bug Fixes ----------*/
+
+/*---------- General ----------*/
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body {
+    position: relative;
+    background: #5d7a2e;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url(../images/grass.jpg);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(../images/grass.jpg);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(../images/grass.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(../images/grass.jpg);
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.7;
+    z-index: 0;
+}
+html, body {
+    max-height: 100% !important;
+}
+section {
+	font-size: 18px;
+}
+p {
+    margin: 0;
+}
+.row  {
+	margin: 0 0 0 0;
+}
+.displayNone {
+    display: none;
+}
+.container_width  {
+	margin: auto;
+    width: 345px;
+}
+.inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0;
+}
+.outer {
+    display: table;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh; /*maybe move*/
+    vertical-align: middle;
+    padding: 0;
+}
+/*---------- End General ----------*/
+
+/*---------- Phase 0 - Rotate Screen ----------*/
+.img-container img {
+    display: none;
+}
+/*---------- End Phase 0 - Rotate Screen ----------*/
+
+/*---------- Phase 1 - Card Flipping ----------*/
+.flipContainer {
+    height: 400px;
+}
+.flipContainer.flip .cardBack {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+}
+.flipContainer.flip .cardFront {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);    
+}
+.card {
+    width: 230px;
+    margin: auto;
+    position: relative;
+    -webkit-perspective: 1000px;
+            perspective: 1000px; /*for -ms- and -moz-, direct parent of child*/
+    background: #202020;
+}
+.card > img {
+    position: absolute;
+    left: 0px; 
+    top: 0px;
+    width: 100%;
+    height: 385px;
+    margin-top: 15px;
+}
+.cardFront {
+    background: transparent;
+    z-index: 2;
+}
+.cardBack {
+    background: transparent;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    z-index: 1;
+}
+.cardFront, .cardBack {
+    -webkit-backface-visibility: hidden; /*fixes flickering on mobile browsers*/
+            backface-visibility: hidden;
+    -webkit-transition: 1.5s;
+         -o-transition: 1.5s;
+            transition: 1.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.reveal {
+    -webkit-animation: reveal 1.75s ease forwards;
+            animation: reveal 1.75s ease forwards;
+}
+@-webkit-keyframes reveal {
+  0% {
+     opacity: 0;
+    }
+  100% {
+     opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+     opacity: 0;
+    }
+  100% {
+     opacity: 1;
+  }
+}
+.shake {
+    -webkit-animation: shake 4s 1s ease-out both infinite;
+            animation: shake 4s 1s ease-out both infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden; /*fixes flickering on mobile browsers*/
+            backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+@-webkit-keyframes shake {
+    2.5%, 22.5% {
+        -webkit-transform: translate3d(-.5px, 0, 0);
+                transform: translate3d(-.5px, 0, 0);
+  }
+    5%, 20% {
+        -webkit-transform: translate3d(1px, 0, 0);
+                transform: translate3d(1px, 0, 0);
+  }
+    7.5%, 12.5%, 17.5% {
+        -webkit-transform: translate3d(-2px, 0, 0);
+                transform: translate3d(-2px, 0, 0);
+  }
+    10%, 15% {
+        -webkit-transform: translate3d(2px, 0, 0);
+                transform: translate3d(2px, 0, 0);
+  }
+}
+@keyframes shake {
+    2.5%, 22.5% {
+        -webkit-transform: translate3d(-.5px, 0, 0);
+                transform: translate3d(-.5px, 0, 0);
+  }
+    5%, 20% {
+        -webkit-transform: translate3d(1px, 0, 0);
+                transform: translate3d(1px, 0, 0);
+  }
+    7.5%, 12.5%, 17.5% {
+        -webkit-transform: translate3d(-2px, 0, 0);
+                transform: translate3d(-2px, 0, 0);
+  }
+    10%, 15% {
+        -webkit-transform: translate3d(2px, 0, 0);
+                transform: translate3d(2px, 0, 0);
+  }
+}
+.fadeout {
+    -webkit-animation: fade 1s ease forwards;
+            animation: fade 1s ease forwards;
+}
+.fadein {
+    -webkit-animation: fade 1s ease reverse;
+            animation: fade 1s ease reverse;
+}
+@-webkit-keyframes fade {
+  0% {
+     opacity: 1;
+    }
+  100% {
+     opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+     opacity: 1;
+    }
+  100% {
+     opacity: 0;
+  }
+}
+.message {
+    color: #ffffff;
+    padding: 20px 25px;
+}
+/*---------- End Phase 1 - Card Flipping----------*/
+
+/*---------- Phase 2 - Terminal ----------*/
+.terminal {
+    width: 300px;
+    height: 470px;
+    margin: auto;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+.indicator {
+	margin: auto;
+    background: #f3f3f3;
+  	width: 20px;
+    height: 20px;
+    border-radius: 25px;
+}
+.ind-yellow {
+    background: #ffd700;
+}
+.readout {
+	margin: auto;
+  	height: 56px;
+    width: 280px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.readout > div {
+    width: 134px;
+}
+@-webkit-keyframes typing { 
+    from { width: 0; } 
+}
+@keyframes typing { 
+    from { width: 0; } 
+}
+.typewriter { 
+	font-family: VT323, monospace;
+    font-size: 24px;
+    color: #222222;
+    letter-spacing: 2px;
+    position: relative;
+    top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	margin: auto;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.typewriteranimateA {
+    -webkit-animation: typing 1.5s steps(50, end);
+            animation: typing 1.5s steps(50, end);
+}
+.typewriteranimateB {
+    -webkit-animation: typing 1s steps(50, end);
+            animation: typing 1s steps(50, end);
+}
+.blink {
+    -webkit-animation: blink 1s infinite;
+            animation: blink 1s infinite;
+}
+@-webkit-keyframes blink{
+    to {opacity: 0;}
+}
+@keyframes blink{
+    to {opacity: 0;}
+}
+.cardreaderContainer{
+    height: 30px; 
+    width: 200px; 
+    margin: auto; 
+    background: #141517;
+}
+.cardreader {
+	margin: auto;
+	background: #141517;
+  	width: 200px;
+    height: 10px;
+}
+.cardreadertop {
+    z-index: 3;
+    height: 20px;
+    position: absolute;
+}
+.cardreaderbottom {
+    z-index: -1;
+    height: 10px;
+    position: absolute;
+}
+.datacard {
+    -webkit-perspective: 1000px;
+            perspective: 1000px; /*for -ms- and -moz-, direct parent of child*/
+}
+.datacard img {
+    width: 170px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    pointer-events: none;
+}
+.insertcard img {
+    -webkit-animation: insert 2s ease forwards;
+            animation: insert 2s ease forwards;
+}
+@-webkit-keyframes insert {
+    50% {
+        -webkit-transform: rotateX(50deg);
+                transform: rotateX(50deg);
+  }
+    100% {
+        -webkit-transform: rotateX(50deg) translateY(-239px);
+                transform: rotateX(50deg) translateY(-239px);
+    }
+}
+@keyframes insert {
+    50% {
+        -webkit-transform: rotateX(50deg);
+                transform: rotateX(50deg);
+  }
+    100% {
+        -webkit-transform: rotateX(50deg) translateY(-239px);
+                transform: rotateX(50deg) translateY(-239px);
+    }
+}
+.col-xs-2, .col-sm-12 {
+	padding: 0;
+  	margin: auto;
+}
+.top {
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 1;
+  }
+    50% {
+        opacity: 0.3;
+  }
+    100% {
+        opacity: 1;
+  }
+}
+@keyframes pulse {
+    0% {
+        opacity: 1;
+  }
+    50% {
+        opacity: 0.3;
+  }
+    100% {
+        opacity: 1;
+  }
+}
+.movedown1 {
+    -webkit-animation: movedown1 2s forwards;
+            animation: movedown1 2s forwards;
+}
+@-webkit-keyframes movedown1 {
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes movedown1 {
+    100% {
+        opacity: 0;
+    }
+}
+/*---------- End Phase 2 - Terminal----------*/
+
+/*---------- Phase 3 - Invitation ----------*/
+.movedown2 {
+    -webkit-animation: movedown2 1.5s ease-in forwards;
+            animation: movedown2 1.5s ease-in forwards;
+}
+@-webkit-keyframes movedown2 {
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+@keyframes movedown2 {
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+.invite {
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    -webkit-transform: translateY(-1500px);
+        -ms-transform: translateY(-1500px);
+            transform: translateY(-1500px);
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    font-family: VT323, monospace;
+    font-size: 24px;
+    color: #eeeeee;
+    text-transform: uppercase;
+}
+.invitetext {
+    width: 100%;
+    color: #ffffff;
+    font-size: 20px;
+    overflow: hidden;
+    padding-top: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.1;
+}
+.overlay p span:nth-child(1){ 
+    color: yellowgreen;
+}
+.overlay p span:nth-child(2){ 
+    color: darkorange;
+}
+.overlay p span:nth-child(3){ 
+    color: deepskyblue;
+}
+.overlay p:first-child { 
+    font-size: 25px;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+}
+.cta {
+    font-size: 25px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    padding: 0;
+}
+#cta1:hover, #cta1:active, #cta1:focus, #cta1:visited, #cta2:hover, #cta2:active, #cta2:focus, #cta2:visited {
+    text-decoration: none;
+}
+#cta1 {
+    color: yellowgreen;
+}
+#cta1:active {
+    color: rgba(154, 205, 50, 0.6);
+}
+#cta2 {
+    color: deepskyblue;
+}
+#cta2:active {
+    color: rgba(0, 191, 255, 0.6);
+}
+/*---------- End Phase 3 - Invitation ----------*/
