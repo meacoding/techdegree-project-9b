@@ -32,8 +32,7 @@ h1 {
     }
 }
 @media (min-width: 992px){
-    h1,
-    p {
+    h1 {
         text-align: center;
     }
 }
@@ -127,12 +126,12 @@ svg {
     width: 40px;
     margin: 15px;
 }
-@media (min-width:1200px){
+/* @media (min-width:1200px){
     #intro,
     #contact {
         text-align: center;
     }
-}
+} */
 
 
 /*---------------------------*/
@@ -161,9 +160,12 @@ align-items: center;
 /*Intro----------------------*/
 /*---------------------------*/
 
-#a-email {
+.a-intro {
     text-decoration: none;
     color: #FE4A49;
+}
+#intro span {
+    text-transform: uppercase;
 }
 
 
@@ -308,7 +310,7 @@ align-items: center;
 /*Learning-------------------*/
 /*---------------------------*/
 
-#a-treehouse {
+.a-learning {
     color: #9EBE58;
     text-decoration: none;
 }
@@ -340,7 +342,7 @@ align-items: center;
     color: #ffffff;
     line-height: 1;
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1px;
     text-transform: capitalize;
     font-weight: 600;
@@ -361,18 +363,15 @@ align-items: center;
     width: 172px;
     min-width: 172px;
     height: 172px;
-}   
-@media (min-width: 992px){
-
 }
 @media (min-width: 1200px){
     #insert-here {
         display: flex;
         padding: 0 75px;
     }
-    p {
+    /* p {
         text-align: center;
-    }
+    } */
 }
 
 /*---------------------------*/
@@ -411,7 +410,7 @@ iframe {
 
 #footer {
     font-size: 16px;
-    color: #545454;
+    color: #ffffff;
     text-align: center;
     padding-bottom: 50px;
 }
@@ -419,6 +418,9 @@ iframe {
     height: 30px;
     width: 30px;
     margin: 5px;
+}
+#footer .svg-spacing {
+    margin-bottom: 10px;
 }
 
 /*---------------------------*/
@@ -463,6 +465,10 @@ iframe {
     width: 100%;
     text-align: left;
     margin: 30px auto 0;
+}
+.overlay-content img {
+    width: 100%;
+    margin-top: 20px;
 }
 @media (min-width: 768px) {
     .overlay-content .project-preview {

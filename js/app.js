@@ -13,7 +13,7 @@ $(document).ready(function(){
     $.getJSON("https://teamtreehouse.com/meacoding.json", function(data) {
 
         const jsonData = data.badges;
-        const lastThreeOfJson = jsonData.slice((jsonData.length)-4);
+        const lastThreeOfJson = jsonData.slice((jsonData.length)-2);
 
         for (let i = 0; i < lastThreeOfJson.length; i++){
 
@@ -51,8 +51,8 @@ $(document).ready(function(){
                 <a href="${url}" target="_blank">
                     <img class="course-img" src="${img}" alt="">
                     <div class="course-info">
-                        <h2 class="name">${name}</h2>
-                        <p class="email">${fullDate}</p>
+                        <h2 class="email">${fullDate}</h2>
+                        <p class="name">${name}</p>
                     </div>
                 </a>
             `;
