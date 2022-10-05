@@ -23,7 +23,5 @@ To build a portfolio—the final project of the Treehouse Techdegree FEWD progra
 
 An issue I ran into deals with fixed modal overlays on iOS. In the modal overlay, you had the ability to scroll the body underneath the modal even though it's styling was set to overflow: hidden. I shake my fist at you! This issue does not appear, to the best of my knowledge, on any other platform. The long scrolling of the body has been mitigated but a slight "glitch" still exists where if you hold and drag the top or bottom of the screen the page will refresh when on an iOS device using either Chrome or Safari. Good times. The user will only experience these if they are super awkwardly scrolling through the modal like I was trying to "break" it.
 
-Note: My portfolio has evolved since I first created it.
-
 ## License
 None.
