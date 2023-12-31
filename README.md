@@ -19,9 +19,9 @@ To build a portfolio—the final project of the Treehouse Techdegree FEWD progra
  It's a standard sectional single page website. I prototyped it in Adobe XD. The project information is displayed via modal overlays. The courses are inserted via $.getJSON. The contact form is inserted via iframe to prevent index.html refreshing upon PHP submit. 
  
 ## Backstory
- This portfolio exists because I was displeased with how my original portfolio was turning out—[here](https://github.com/meacoding/techdegree-project-9). I scrapped that project and started on this one. Since I have a Windows machine, I found Adobe XD as an alternative to Sketch for making prototypes. Like a kid in a candy store, I created the website you see with slight modifications.
+This is the original version of my portfolio that was submitted as the final project for the Treehouse Techdegree program.
 
-An issue I ran into deals with fixed modal overlays on iOS. In the modal overlay, you had the ability to scroll the body underneath the modal even though it's styling was set to overflow: hidden. I shake my fist at you! This issue does not appear, to the best of my knowledge, on any other platform. The long scrolling of the body has been mitigated but a slight "glitch" still exists where if you hold and drag the top or bottom of the screen the page will refresh when on an iOS device using either Chrome or Safari. Good times. The user will only experience these if they are super awkwardly scrolling through the modal like I was trying to "break" it.
+A notable issue I ran into pertains to fixed modal overlays on iOS devices. In modal overlays, you have the ability to scroll the body underneath the modal even though its styling is set to overflow: hidden. This issue does not appear, to the best of my knowledge, on any other device. The long scrolling of the body has mostly been mitigated. The user will only experience this if they are super awkwardly scrolling through the modal like I was trying to "break" it.
 
 ## License
 None.
